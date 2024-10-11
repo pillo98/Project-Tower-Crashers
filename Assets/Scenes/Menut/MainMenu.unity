@@ -1174,7 +1174,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Game: 
-  Credits: 
+  Credits: Credits
   Alkuruutu: 
   Kontrollit: ControlsMenu
 --- !u!1 &1092957550
