@@ -9,6 +9,8 @@ public class MovementController : MonoBehaviour
     [SerializeField] private float speed;
     private float valueX;
 
+    public bool fallTrough;
+
     private void Update()
     {
         Keyboard myKeyboard = Keyboard.current;
@@ -27,6 +29,17 @@ public class MovementController : MonoBehaviour
             {
                 valueX = 0;
             }
+        }
+
+
+        // ---- ONE WAY PLATFORMER ----
+        if (Keyboard.current.sKey.isPressed) 
+        {
+            fallTrough = true;
+        }
+        else
+        {
+            fallTrough = false;
         }
 
     }
