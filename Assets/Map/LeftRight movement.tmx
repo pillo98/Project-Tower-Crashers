@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.10" tiledversion="1.11.0" orientation="orthogonal" renderorder="right-down" width="10" height="10" tilewidth="16" tileheight="16" infinite="0" nextlayerid="3" nextobjectid="1">
+ <tileset firstgid="1" source="Project Tower Crashers Map/sandbrick_grass_alt_tileset_2.tsx"/>
+ <tileset firstgid="43" source="Project Tower Crashers Map/pirates.v1.tsx"/>
+ <tileset firstgid="299" source="Project Tower Crashers Map/pixel_keys_x16_black.tsx"/>
+ <tileset firstgid="439" source="../Graphics/Arrow.tsx"/>
+ <tileset firstgid="440" source="../Graphics/Tilesets/Pixel Keys x16/Pixel Keys x16/Tilemaps/pixel_keys_x16_white.tsx"/>
+ <layer id="1" name="Tile Layer 1" width="10" height="10">
+  <data encoding="csv">
+0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,2147483709,0,0,0,0,0,
+0,1,2,2,2,2,2,2,3,0,
+0,8,9,9,9,9,9,9,10,0
+</data>
+ </layer>
+ <layer id="2" name="AD" width="10" height="10" offsetx="1.56307" offsety="15.4353">
+  <data encoding="csv">
+0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,522,524,0,0,
+0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,
+0,0,0,1610613175,0,2684354999,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0
+</data>
+ </layer>
+</map>
