@@ -4,6 +4,7 @@
  <tileset firstgid="43" source="../../Project Tower Crashers Map/pirates.v1.tsx"/>
  <tileset firstgid="299" source="../../../Graphics/Tilesets/Pixel Keys x16/Pixel Keys x16/Tilemaps/pixel_keys_x16_white.tsx"/>
  <tileset firstgid="439" source="../../../Graphics/Arrow.tsx"/>
+ <tileset firstgid="440" source="../../../Graphics/Characters/Pirate_Blue_Jump.tsx"/>
  <layer id="1" name="Tile Layer 1" width="10" height="10">
   <data encoding="csv">
 0,0,0,0,0,0,0,0,0,0,
@@ -27,7 +28,7 @@
 0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,2147483709,0,0,0,0,0,
+0,0,0,0,2147484090,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0
 </data>
@@ -38,7 +39,7 @@
 0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,
-0,0,0,0,2147483709,0,0,0,0,0,
+0,0,0,0,2147484091,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,
