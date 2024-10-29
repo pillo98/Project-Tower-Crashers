@@ -75,7 +75,7 @@ public class PlacementSystem : MonoBehaviour
         {
             return;
         }
-        Vector2 mousePosition = inputManager.GetSelectedMapPosition();
+        Vector3 mousePosition = inputManager.GetSelectedMapPosition();
         Vector3Int gridPosition = grid.WorldToCell(mousePosition);
 
         buildingState.OnAction(gridPosition);
@@ -99,8 +99,9 @@ public class PlacementSystem : MonoBehaviour
     {
         if (buildingState == null)
             return;
-        Vector2 mousePosition = inputManager.GetSelectedMapPosition();
+        Vector3 mousePosition = inputManager.GetSelectedMapPosition();
         Vector3Int gridPosition = grid.WorldToCell(mousePosition);
+        Debug.Log(mousePosition + " " + gridPosition);
         if (lastDetectedPosition != gridPosition)
         {
             buildingState.UpdateState(gridPosition);
