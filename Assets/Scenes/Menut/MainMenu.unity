@@ -171,7 +171,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -6051770768054766880, guid: b54a642cce9d2294a933e245b5ddfc11, type: 3}
       propertyPath: m_Color.a
-      value: 0.29411766
+      value: 0.49019608
       objectReference: {fileID: 0}
     - target: {fileID: -3202611507394340709, guid: b54a642cce9d2294a933e245b5ddfc11, type: 3}
       propertyPath: m_Name
@@ -179,11 +179,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -1708891562186053127, guid: b54a642cce9d2294a933e245b5ddfc11, type: 3}
       propertyPath: m_Color.a
-      value: 0.29411766
+      value: 0.39215687
       objectReference: {fileID: 0}
     - target: {fileID: 3283936591065705223, guid: b54a642cce9d2294a933e245b5ddfc11, type: 3}
       propertyPath: m_Color.a
-      value: 0.29411766
+      value: 0.39215687
       objectReference: {fileID: 0}
     - target: {fileID: 7511460780475853768, guid: b54a642cce9d2294a933e245b5ddfc11, type: 3}
       propertyPath: m_LocalScale.x
@@ -353,7 +353,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 1922875878, guid: e4a1ad2dc8b888840b061f6e954966e7, type: 3}
+  m_Sprite: {fileID: -1507233369, guid: 560e433c561818b4281b04a81f2f8870, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1038,7 +1038,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 1922875878, guid: e4a1ad2dc8b888840b061f6e954966e7, type: 3}
+  m_Sprite: {fileID: -1507233369, guid: 560e433c561818b4281b04a81f2f8870, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1428,7 +1428,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 1922875878, guid: e4a1ad2dc8b888840b061f6e954966e7, type: 3}
+  m_Sprite: {fileID: -1507233369, guid: 560e433c561818b4281b04a81f2f8870, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1561,7 +1561,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 1922875878, guid: e4a1ad2dc8b888840b061f6e954966e7, type: 3}
+  m_Sprite: {fileID: -1507233369, guid: 560e433c561818b4281b04a81f2f8870, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1

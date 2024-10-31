@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: b981c1444471ed24bab675fdfccd7e88
+guid: 785a45f64b382704db640bf9a6915a4a
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -110,7 +110,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Skeleton_Tbag_0
+      name: Skeleton_Jump_0
       rect:
         serializedVersion: 2
         x: 0
@@ -124,14 +124,35 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7995e11494f0ae646b261ac33ce5205d
-      internalID: 262264863
+      spriteID: 51d84288bdccdc944b991b443f4a4b63
+      internalID: -1248134131
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Skeleton_Tbag_1
+      name: Skeleton_Jump_1
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 16
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5c4f4b793cb4b1d4caab6b9e7a4ab794
+      internalID: 1626226649
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skeleton_Jump_2
       rect:
         serializedVersion: 2
         x: 0
@@ -145,8 +166,29 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: cbc76afde26fa2b4283e3bbe51de0b1e
-      internalID: -1395062451
+      spriteID: 571374bc871ade243a310368b31b7c4e
+      internalID: 671744357
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Skeleton_Jump_3
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ffec83f61f53e7a47b7e188680719b60
+      internalID: -892972863
       vertices: []
       indices: 
       edges: []
@@ -154,7 +196,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: b0acfb0f7f727ee4cab1652c3de7d9e0
+    spriteID: a976c1cada94c344eb48a8a195503cc8
     internalID: 0
     vertices: []
     indices: 
@@ -162,8 +204,10 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Skeleton_Tbag_0: 262264863
-      Skeleton_Tbag_1: -1395062451
+      Skeleton_Jump_0: -1248134131
+      Skeleton_Jump_1: 1626226649
+      Skeleton_Jump_2: 671744357
+      Skeleton_Jump_3: -892972863
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
