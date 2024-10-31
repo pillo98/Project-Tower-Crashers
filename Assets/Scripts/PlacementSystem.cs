@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 public class PlacementSystem : MonoBehaviour
 {
@@ -37,6 +38,10 @@ public class PlacementSystem : MonoBehaviour
     [SerializeField]
     private SoundFeedback soundFeedback;
 
+
+    private bool Rotated = false;
+    private int CurrentID;
+
     private void Start()
     {
         gridVisualization.SetActive(false);
@@ -56,6 +61,8 @@ public class PlacementSystem : MonoBehaviour
                                            furnitureData,
                                            objectPlacer,
                                            soundFeedback);
+        Debug.Log(Rotated);
+        CurrentID = ID;
         inputManager.OnClicked += PlaceStructure;
         inputManager.OnExit += StopPlacement;
     }
@@ -101,12 +108,27 @@ public class PlacementSystem : MonoBehaviour
             return;
         Vector3 mousePosition = inputManager.GetSelectedMapPosition();
         Vector3Int gridPosition = grid.WorldToCell(mousePosition);
-        Debug.Log(mousePosition + " " + gridPosition);
         if (lastDetectedPosition != gridPosition)
         {
             buildingState.UpdateState(gridPosition);
             lastDetectedPosition = gridPosition;
         }
+        if (Input.GetKeyDown(KeyCode.R))
+        {
+            TryRotate();
+        }
 
+    }
+    
+    private void TryRotate()
+    {
+        if (Rotated == false)
+        {
+            StartPlacement(CurrentID + 1);
+        }
+        if (Rotated == true)
+        {
+            StartPlacement(CurrentID - 1);
+        }
     }
 }
