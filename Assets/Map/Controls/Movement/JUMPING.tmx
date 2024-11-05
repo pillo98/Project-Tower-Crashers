@@ -19,7 +19,7 @@
 0,8,9,9,9,9,9,9,10,0
 </data>
  </layer>
- <layer id="2" name="Pirate ground" width="10" height="10">
+ <layer id="2" name="Pirate ground" width="10" height="10" opacity="0.5">
   <data encoding="csv">
 0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,
