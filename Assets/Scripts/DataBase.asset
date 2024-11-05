@@ -14,12 +14,26 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objectsData:
   - <Name>k__BackingField: 1x3
-    <ID>k__BackingField: 0
+    <ID>k__BackingField: 3
     <Size>k__BackingField: {x: 1, y: 3}
     <Prefab>k__BackingField: {fileID: 6569747233947127726, guid: 752de28a9a8ba664abd1f196497e8657, type: 3}
-    <Rotation>k__BackingField: 0
   - <Name>k__BackingField: 1x3 Rotated
-    <ID>k__BackingField: 1
+    <ID>k__BackingField: 4
     <Size>k__BackingField: {x: 3, y: 1}
     <Prefab>k__BackingField: {fileID: 6569747233947127726, guid: ffdaf0ad6c51bb348a7fb19e02f00bb3, type: 3}
-    <Rotation>k__BackingField: 1
+  - <Name>k__BackingField: 1x1 Box
+    <ID>k__BackingField: 5
+    <Size>k__BackingField: {x: 1, y: 1}
+    <Prefab>k__BackingField: {fileID: 5762050943130466516, guid: f81443b7d29aa9d459519930b149b12f, type: 3}
+  - <Name>k__BackingField: 1x1 Box "Rotated"
+    <ID>k__BackingField: 6
+    <Size>k__BackingField: {x: 1, y: 1}
+    <Prefab>k__BackingField: {fileID: 5762050943130466516, guid: f81443b7d29aa9d459519930b149b12f, type: 3}
+  - <Name>k__BackingField: 1x2
+    <ID>k__BackingField: 7
+    <Size>k__BackingField: {x: 1, y: 2}
+    <Prefab>k__BackingField: {fileID: 6569747233947127726, guid: de28372f69eb14d4692094d384fcdd06, type: 3}
+  - <Name>k__BackingField: 1x2 Rotated
+    <ID>k__BackingField: 8
+    <Size>k__BackingField: {x: 2, y: 1}
+    <Prefab>k__BackingField: {fileID: 6569747233947127726, guid: d432d09e3e4289e429ef67eaf80d910b, type: 3}

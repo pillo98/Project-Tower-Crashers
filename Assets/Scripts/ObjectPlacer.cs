@@ -24,5 +24,16 @@ public class ObjectPlacer : MonoBehaviour
         Destroy(placedGameObjects[gameObjectIndex]);
         placedGameObjects[gameObjectIndex] = null;
     }
+
+    public void AddPhysics()
+    {
+        foreach (GameObject gameObject in placedGameObjects)
+        {
+            Rigidbody2D rb = gameObject.GetComponent<Rigidbody2D>();
+            rb.simulated = true;
+        }
+
+    }
+      
 }
 

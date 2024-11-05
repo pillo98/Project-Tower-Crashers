@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Projectile
   - Grid
+  - 1x3
   layers:
   - Default
   - TransparentFX
