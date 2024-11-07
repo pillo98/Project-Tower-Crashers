@@ -1,25 +1,24 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class MimicHealthPotion : MonoBehaviour
 {
-    private Rigidbody2D rb2d;
     public PlayerHealth playerHealth;
 
-    // Start is called before the first frame update
-    void Start()
+    private void OnTriggerEnter2D(Collider2D other)
     {
-        rb2d = GetComponent<Rigidbody2D>();
+        if (other.CompareTag("Player"))
+        {
+            PickUp(other);
+        }
     }
 
-    private void OnCollisionEnter2D(Collision2D collision)
+    private void PickUp(Collider2D player)
     {
-        if (collision.gameObject.CompareTag("Player"))
-        {
-            playerHealth.health -= 1f;
+        playerHealth.health -= 1;
 
-            Destroy(gameObject);
-        }
+        Destroy(gameObject);
     }
 }
