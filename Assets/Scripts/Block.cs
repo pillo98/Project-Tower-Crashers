@@ -7,6 +7,12 @@ public class Block : MonoBehaviour
     [SerializeField]
     private int blockHP;
 
+    [SerializeField] 
+    private SpriteRenderer spriteRenderer;
+
+    [SerializeField]
+    private List<Sprite> Textures;
+
     private void OnCollisionEnter2D(Collision2D collision)
     {
         SlingShot slingShot = collision.gameObject.GetComponent<SlingShot>();
@@ -14,6 +20,7 @@ public class Block : MonoBehaviour
         if (collision.gameObject.tag == "Projectile")
         {
             blockHP -= slingShot.Damage;
+            ChangeState(blockHP);
         }
     }
 
@@ -23,6 +30,26 @@ public class Block : MonoBehaviour
         {
             Destroy(gameObject);
 
+        }
+    }
+
+
+    private void ChangeState(int state)
+    {
+        switch (state)
+        {
+            case 0:
+                Destroy(gameObject);
+                break;
+            case 3:
+                spriteRenderer.sprite = Textures[0];
+                break;
+            case 2:
+                spriteRenderer.sprite = Textures[1];
+                break;
+            case 1:
+                spriteRenderer.sprite = Textures[2];
+                break;
         }
     }
 }
