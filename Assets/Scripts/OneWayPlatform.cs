@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class OneWayPlatform : MonoBehaviour
 {
-    MovementController playerControls;
+    PlayerController playerControls;
     PlatformEffector2D effector;
 
     private void Awake()
@@ -16,7 +16,7 @@ public class OneWayPlatform : MonoBehaviour
     {
         if (collision.collider.CompareTag("Player")) 
         {
-            playerControls = collision.gameObject.GetComponent<MovementController>();
+            playerControls = collision.gameObject.GetComponent<PlayerController>();
         }
     }
 
