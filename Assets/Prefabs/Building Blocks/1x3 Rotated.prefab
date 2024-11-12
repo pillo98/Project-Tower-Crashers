@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 5465267736948055925}
   - component: {fileID: 4704169924557144649}
   - component: {fileID: 3368358966564971151}
-  - component: {fileID: 6548453334519103359}
   m_Layer: 4
   m_Name: Square
   m_TagString: Untagged
@@ -134,19 +133,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!114 &6548453334519103359
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 501311641495896135}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe2f17a434b0dd24f89d919a01df96a6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  blockHP: 2
 --- !u!1 &683190691179899822
 GameObject:
   m_ObjectHideFlags: 0
@@ -325,6 +311,7 @@ GameObject:
   m_Component:
   - component: {fileID: 30503722074463185}
   - component: {fileID: 8365403278339915291}
+  - component: {fileID: 2758072161167760078}
   m_Layer: 4
   m_Name: 1x3 Rotated
   m_TagString: Untagged
@@ -375,6 +362,21 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &2758072161167760078
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6569747233947127726}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe2f17a434b0dd24f89d919a01df96a6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  blockHP: 0
+  spriteRenderer: {fileID: 0}
+  Textures: []
 --- !u!1 &8029226548588741068
 GameObject:
   m_ObjectHideFlags: 0

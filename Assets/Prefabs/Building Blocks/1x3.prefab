@@ -10,7 +10,6 @@ GameObject:
   m_Component:
   - component: {fileID: 5465267736948055925}
   - component: {fileID: 3368358966564971151}
-  - component: {fileID: 2628869069449235039}
   m_Layer: 4
   m_Name: Square
   m_TagString: Untagged
@@ -81,19 +80,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!114 &2628869069449235039
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 501311641495896135}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe2f17a434b0dd24f89d919a01df96a6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  blockHP: 3
 --- !u!1 &1812286650088264712
 GameObject:
   m_ObjectHideFlags: 0
@@ -120,7 +106,7 @@ Transform:
   m_GameObject: {fileID: 1812286650088264712}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0.7071068, w: 0.7071068}
-  m_LocalPosition: {x: 0.8, y: -0.334, z: 0}
+  m_LocalPosition: {x: 0.8, y: -0.33, z: 0}
   m_LocalScale: {x: 0.332, y: 2.5, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -204,7 +190,7 @@ Transform:
   m_GameObject: {fileID: 3834909828501317784}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0.7071068, w: 0.7071068}
-  m_LocalPosition: {x: 0.8, y: 0.001, z: 0}
+  m_LocalPosition: {x: 0.8, y: 0, z: 0}
   m_LocalScale: {x: 0.34543598, y: 2.5, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -272,6 +258,7 @@ GameObject:
   m_Component:
   - component: {fileID: 30503722074463185}
   - component: {fileID: 3588598496452362489}
+  - component: {fileID: 7431479398770960806}
   m_Layer: 4
   m_Name: 1x3
   m_TagString: Untagged
@@ -322,6 +309,21 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &7431479398770960806
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6569747233947127726}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe2f17a434b0dd24f89d919a01df96a6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  blockHP: 3
+  spriteRenderer: {fileID: 0}
+  Textures: []
 --- !u!1 &6601967183338890286
 GameObject:
   m_ObjectHideFlags: 0
@@ -348,7 +350,7 @@ Transform:
   m_GameObject: {fileID: 6601967183338890286}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0.7071068, w: 0.7071068}
-  m_LocalPosition: {x: 0.8, y: 0.3315, z: 0}
+  m_LocalPosition: {x: 0.8, y: 0.33, z: 0}
   m_LocalScale: {x: 0.322276, y: 2.5, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
