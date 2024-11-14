@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 8611511082390453654}
   - component: {fileID: 5233918203843556744}
   m_Layer: 0
-  m_Name: Ball
+  m_Name: Ball P2
   m_TagString: Projectile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -101,7 +101,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   initPos: {x: 0, y: 0, z: 0}
   forceFactor: 10
-  Damage: 1
+  BuildDamage: 1
+  damage: 2
+  TagName: P1
   Lifetime: 5
   trajectoryDot: {fileID: 1833503599805921465, guid: 08050cd2b98d60e4b9f032f93cb43fab, type: 3}
   number: 15

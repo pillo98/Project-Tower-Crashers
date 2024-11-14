@@ -235,6 +235,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe2f17a434b0dd24f89d919a01df96a6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  blockHP: 0
-  spriteRenderer: {fileID: 0}
-  Textures: []
+  blockHP: 3
+  spriteRenderer: {fileID: 4359160728195749422}
+  Textures:
+  - {fileID: -371577548, guid: e8b22161862bc9e45bf63be4d7fe15d1, type: 3}
+  - {fileID: -1364039928, guid: e5ef5c53032e1d442bd4e082d40dec54, type: 3}
+  - {fileID: -1376244746, guid: e5ef5c53032e1d442bd4e082d40dec54, type: 3}
