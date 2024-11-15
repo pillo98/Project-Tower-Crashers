@@ -7,10 +7,10 @@ public class BallSpawner : MonoBehaviour
     [SerializeField]
     GameObject ball;
     
-    private GameObject CurrentBall;
+    public GameObject CurrentBall;
 
     public void SpawnBall()
     {
-        CurrentBall = Instantiate(ball);
+        CurrentBall = Instantiate(ball, transform);
     }
 }

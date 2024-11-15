@@ -70,11 +70,13 @@ public class RoundManager : MonoBehaviour
     BallSpawner P2Shoot;
     [SerializeField]
     private GameObject CamPointP2S;
+    [SerializeField]
 
     private void Start()
     {
         ChangeRound();
         MoveRoundTimer = MoveRoundInitialTime;
+        Timer.enabled = false;
     }
 
     public void ChangeRound()
@@ -102,6 +104,7 @@ public class RoundManager : MonoBehaviour
                 }
                 break;
             case rounds.P1Move:
+                Timer.enabled = true;
                 foreach (GameObject s in P2build)
                 {
                     s.active = false;
@@ -121,6 +124,7 @@ public class RoundManager : MonoBehaviour
                 camBounds.TargetObject = CamPointP2M;
                 break;
             case rounds.P1Shoot:
+                Timer.enabled = false;
                 P2Movement.enabled = false;
                 P2Player.enabled = false;
                 P2Pjump.enabled = false;
@@ -129,7 +133,7 @@ public class RoundManager : MonoBehaviour
                 break;
             case rounds.P2Shoot:
                 P2Shoot.SpawnBall();
-                camBounds.TargetObject = CamPointP1S;
+                camBounds.TargetObject = CamPointP2S;
                 break;
         }
     }
@@ -144,10 +148,28 @@ public class RoundManager : MonoBehaviour
         {
             TimerStart();
         }
+        if (CurrentRound == rounds.P1Shoot)
+        {
+            if (P1Shoot.CurrentBall == null)
+            {
+                ChangeRound();
+            }
+        }
+        if (CurrentRound == rounds.P2Shoot)
+        {
+            if (P2Shoot.CurrentBall == null)
+            {
+                CurrentRound = rounds.P2Build;
+                ChangeRound();
+            }
+        }
+
+
     }
 
     private void TimerStart()
     {
+        Timer.IsActive();
         MoveRoundTimer -= Time.deltaTime;
         MoveRoundTimeSec = Mathf.FloorToInt(MoveRoundTimer % 60);
         Timer.text = MoveRoundTimeSec.ToString();
