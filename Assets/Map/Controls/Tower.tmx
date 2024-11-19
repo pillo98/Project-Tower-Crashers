@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.10" tiledversion="1.11.0" orientation="orthogonal" renderorder="right-down" width="5" height="8" tilewidth="16" tileheight="16" infinite="0" nextlayerid="3" nextobjectid="1">
+ <tileset firstgid="1" source="../../Graphics/Dungeon Tile Set (1).tsx"/>
+ <layer id="1" name="Tile Layer 1" width="5" height="8">
+  <data encoding="csv">
+0,0,0,0,0,
+0,0,0,0,0,
+0,191,0,0,0,
+161,161,0,0,0,
+0,161,161,0,0,
+0,0,0,0,191,
+0,0,0,0,161,
+191,0,0,0,161
+</data>
+ </layer>
+ <layer id="2" name="Tile Layer 2" width="5" height="8" offsetx="5.09006" offsety="0">
+  <data encoding="csv">
+0,0,0,0,0,
+0,0,0,0,0,
+0,0,0,0,0,
+0,0,0,0,0,
+0,0,0,0,0,
+0,1610612890,0,0,0,
+0,1610612889,0,0,0,
+0,1610612888,0,0,0
+</data>
+ </layer>
+</map>
