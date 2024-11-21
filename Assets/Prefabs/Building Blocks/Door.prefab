@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5465267736948055925}
   - component: {fileID: 3368358966564971151}
-  m_Layer: 4
+  m_Layer: 8
   m_Name: Square
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -89,7 +89,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1345676689739213540}
   - component: {fileID: 5187061260869657396}
-  m_Layer: 4
+  m_Layer: 8
   m_Name: SpriteRenderer_bottom
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -173,7 +173,7 @@ GameObject:
   m_Component:
   - component: {fileID: 995210232326287093}
   - component: {fileID: 3463405389715251742}
-  m_Layer: 4
+  m_Layer: 8
   m_Name: SpriteRenderer_middle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -258,7 +258,7 @@ GameObject:
   - component: {fileID: 30503722074463185}
   - component: {fileID: 3588598496452362489}
   - component: {fileID: 3278666019257068106}
-  m_Layer: 4
+  m_Layer: 8
   m_Name: Door
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -325,9 +325,9 @@ MonoBehaviour:
   - {fileID: 3463405389715251742}
   - {fileID: 5187061260869657396}
   Textures:
-  - {fileID: 1770814518, guid: e8b22161862bc9e45bf63be4d7fe15d1, type: 3}
-  - {fileID: -1073510800, guid: ba7cf4f7f3831ed488e33bd9321dae65, type: 3}
-  - {fileID: -1226598271, guid: e31599073755d6e47a4890935c59a56b, type: 3}
-  - {fileID: -1116518902, guid: e8b22161862bc9e45bf63be4d7fe15d1, type: 3}
-  - {fileID: 1343994773, guid: ba7cf4f7f3831ed488e33bd9321dae65, type: 3}
-  - {fileID: 1464328095, guid: e31599073755d6e47a4890935c59a56b, type: 3}
+  - {fileID: 1180325287, guid: e8b22161862bc9e45bf63be4d7fe15d1, type: 3}
+  - {fileID: 2060495810, guid: f3d54ff34c3c14f4a9f5a76cbba0a888, type: 3}
+  - {fileID: 1468598029, guid: 787837d78cc03454e8889a48447af3ee, type: 3}
+  - {fileID: -391233270, guid: e8b22161862bc9e45bf63be4d7fe15d1, type: 3}
+  - {fileID: 1228068662, guid: f3d54ff34c3c14f4a9f5a76cbba0a888, type: 3}
+  - {fileID: 1940936543, guid: 787837d78cc03454e8889a48447af3ee, type: 3}

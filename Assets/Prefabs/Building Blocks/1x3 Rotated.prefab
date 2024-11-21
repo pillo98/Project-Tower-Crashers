@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 5465267736948055925}
   - component: {fileID: 4704169924557144649}
   - component: {fileID: 3368358966564971151}
-  m_Layer: 4
+  m_Layer: 8
   m_Name: Square
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -118,7 +118,7 @@ BoxCollider2D:
     serializedVersion: 2
     m_Bits: 4294967295
   m_IsTrigger: 0
-  m_UsedByEffector: 0
+  m_UsedByEffector: 1
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
@@ -143,7 +143,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3659745695210362281}
   - component: {fileID: 4716782191590746425}
-  m_Layer: 4
+  m_Layer: 8
   m_Name: SpriteRenderer_middle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -227,7 +227,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3400850684553274978}
   - component: {fileID: 223451843007164840}
-  m_Layer: 4
+  m_Layer: 8
   m_Name: SpriteRenderer_left
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -312,7 +312,7 @@ GameObject:
   - component: {fileID: 30503722074463185}
   - component: {fileID: 8365403278339915291}
   - component: {fileID: 4909613642860749205}
-  m_Layer: 4
+  m_Layer: 8
   m_Name: 1x3 Rotated
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -361,7 +361,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 7
 --- !u!114 &4909613642860749205
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -399,7 +399,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2045436728191598218}
   - component: {fileID: 6330827914906699302}
-  m_Layer: 4
+  m_Layer: 8
   m_Name: SpriteRenderer_right
   m_TagString: Untagged
   m_Icon: {fileID: 0}

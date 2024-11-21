@@ -14,7 +14,7 @@ public class OneWayPlatform : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.collider.CompareTag("Player")) 
+        if (collision.gameObject.GetComponent<PlayerController>()) 
         {
             playerControls = collision.gameObject.GetComponent<PlayerController>();
         }

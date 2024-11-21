@@ -26,6 +26,8 @@ public class RoundManager : MonoBehaviour
 
     [SerializeField]
     TMP_Text Timer;
+    [SerializeField]
+    GameObject timer;
 
     [Header("Round P1build")]
     [SerializeField]
@@ -109,6 +111,7 @@ public class RoundManager : MonoBehaviour
                 break;
             case rounds.P1Move:
                 Timer.enabled = true;
+                timer.active = true;
                 foreach (GameObject s in P2build)
                 {
                     s.active = false;
@@ -131,6 +134,7 @@ public class RoundManager : MonoBehaviour
                 break;
             case rounds.P1Shoot:
                 Timer.enabled = false;
+                timer.active = true;
                 P2Movement.enabled = false;
                 P2Player.enabled = false;
                 P2Pjump.enabled = false;

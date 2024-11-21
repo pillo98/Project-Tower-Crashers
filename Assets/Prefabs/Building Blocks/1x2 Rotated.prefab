@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5465267736948055925}
   - component: {fileID: 3368358966564971151}
-  m_Layer: 4
+  m_Layer: 8
   m_Name: Square
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -63,7 +63,7 @@ BoxCollider2D:
     serializedVersion: 2
     m_Bits: 4294967295
   m_IsTrigger: 0
-  m_UsedByEffector: 0
+  m_UsedByEffector: 1
   m_UsedByComposite: 0
   m_Offset: {x: 0.012707114, y: 0}
   m_SpriteTilingProperty:
@@ -88,7 +88,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7860468023046136160}
   - component: {fileID: 4359160728195749422}
-  m_Layer: 4
+  m_Layer: 8
   m_Name: SpriteRenderer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -173,7 +173,7 @@ GameObject:
   - component: {fileID: 30503722074463185}
   - component: {fileID: 3588598496452362489}
   - component: {fileID: 3739015759108939449}
-  m_Layer: 4
+  m_Layer: 8
   m_Name: 1x2 Rotated
   m_TagString: Untagged
   m_Icon: {fileID: 0}

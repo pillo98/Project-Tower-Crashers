@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 7713407318117173924}
   - component: {fileID: 4439408739494751030}
   - component: {fileID: 5026101178744313033}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: 1x1 box
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -89,7 +89,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5323430491504509110}
   - component: {fileID: 7478067396654238056}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: SpriteRenderer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -173,7 +173,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5047582372989923299}
   - component: {fileID: 3396558073586029973}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Square
   m_TagString: Untagged
   m_Icon: {fileID: 0}
