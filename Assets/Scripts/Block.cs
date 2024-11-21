@@ -19,7 +19,7 @@ public class Block : MonoBehaviour
 
         if (collision.gameObject.tag == "Projectile")
         {
-            blockHP -= slingShot.Damage;
+            blockHP -= slingShot.BuildDamage;
             ChangeState(blockHP);
         }
     }

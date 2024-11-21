@@ -44,6 +44,7 @@ public class PlacementSystem : MonoBehaviour
 
     [SerializeField] private float cooldownTime = 5f;
     [SerializeField] private float lastUsedTime;
+    public bool CanBuild;
 
     private void Start()
     {
@@ -51,24 +52,27 @@ public class PlacementSystem : MonoBehaviour
         floorData = new();
         furnitureData = new();
         Rotated = false;
+        CanBuild = true;
     }
 
     public void StartPlacement(int ID)
-    {
-        StopPlacement();
-        gridVisualization.SetActive(true);
-        buildingState = new PlacementState(ID,
-                                           grid,
-                                           preview,
-                                           database,
-                                           floorData,
-                                           furnitureData,
-                                           objectPlacer,
-                                           soundFeedback);
-        CurrentID = ID;
-        Rotated = false;
-        inputManager.OnClicked += PlaceStructure;
-        inputManager.OnExit += StopPlacement;
+    {   if (CanBuild == true)
+        {
+            StopPlacement();
+            gridVisualization.SetActive(true);
+            buildingState = new PlacementState(ID,
+                                               grid,
+                                               preview,
+                                               database,
+                                               floorData,
+                                               furnitureData,
+                                               objectPlacer,
+                                               soundFeedback);
+            CurrentID = ID;
+            Rotated = false;
+            inputManager.OnClicked += PlaceStructure;
+            inputManager.OnExit += StopPlacement;
+        }
     }
 
     public void RotatePlacement(int ID)
@@ -109,7 +113,7 @@ public class PlacementSystem : MonoBehaviour
 
     }
 
-    private void StopPlacement()
+    public void StopPlacement()
     {
         soundFeedback.PlaySound(SoundType.Click);
         if (buildingState == null)

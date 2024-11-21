@@ -7,14 +7,10 @@ public class BallSpawner : MonoBehaviour
     [SerializeField]
     GameObject ball;
     
-    private GameObject CurrentBall;
+    public GameObject CurrentBall;
 
-    // Update is called once per frame
-    void Update()
+    public void SpawnBall()
     {
-        if (CurrentBall == null)
-        {
-            CurrentBall = Instantiate(ball);
-        }
+        CurrentBall = Instantiate(ball, transform);
     }
 }

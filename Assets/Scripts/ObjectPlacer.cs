@@ -2,12 +2,19 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Rendering.Universal;
 
 public class ObjectPlacer : MonoBehaviour
 {
     [SerializeField]
     private List<GameObject> placedGameObjects = new();
 
+    [SerializeField]
+    PlacementSystem placementSystem;
+
+
+    [SerializeField]
+    int Objectlimit;
     public int PlaceObject(GameObject prefab, Vector3 position)
     {
         GameObject newObject = Instantiate(prefab);
@@ -23,6 +30,15 @@ public class ObjectPlacer : MonoBehaviour
             return;
         Destroy(placedGameObjects[gameObjectIndex]);
         placedGameObjects[gameObjectIndex] = null;
+    }
+
+    private void Update()
+    {
+        if (placedGameObjects.Count >= Objectlimit)
+        {
+            placementSystem.CanBuild = false;
+            placementSystem.StopPlacement();
+        }
     }
 
     public void AddPhysics()

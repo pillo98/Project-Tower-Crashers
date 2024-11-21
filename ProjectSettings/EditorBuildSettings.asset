@@ -5,16 +5,31 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/SampleScene.unity
     guid: 8c9cfa26abfee488c85f1582747f6a02
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Menut/MainMenu.unity
     guid: 968314d55ce7d6e46b84ce031fcd34f7
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Menut/ControlsMenu.unity
     guid: ae22e6b6d7c6d434e9fa37bd5e11a73a
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Menut/Credits.unity
     guid: a35c898f3688d91429a1cade525256d2
+  - enabled: 1
+    path: Assets/Scenes/Demo.unity
+    guid: 6b130d80fa543be46a19b102026934d2
+  - enabled: 0
+    path: Assets/Scenes/Map_Paavo.unity
+    guid: dd255b78009e2a0419f874cf3edf85da
+  - enabled: 0
+    path: Assets/Scenes/DragAndDrop.unity
+    guid: 448264955611b9549a4156e058d0c7a1
+  - enabled: 0
+    path: Assets/Scenes/Eero.unity
+    guid: a7474450a542baa428fa50bd0c57b992
+  - enabled: 0
+    path: Assets/Scenes/SlingShot.unity
+    guid: 7419ed3973f363046ac9b462c062abd1
   m_configObjects: {}

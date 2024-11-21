@@ -30,9 +30,9 @@ Transform:
   m_LocalScale: {x: 0.5, y: 3, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 2118360000488484419}
   - {fileID: 995210232326287093}
   - {fileID: 1345676689739213540}
-  - {fileID: 2118360000488484419}
   m_Father: {fileID: 30503722074463185}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &3368358966564971151
@@ -258,7 +258,7 @@ GameObject:
   m_Component:
   - component: {fileID: 30503722074463185}
   - component: {fileID: 3588598496452362489}
-  - component: {fileID: 7431479398770960806}
+  - component: {fileID: 3278666019257068106}
   m_Layer: 4
   m_Name: 1x3
   m_TagString: Untagged
@@ -294,7 +294,7 @@ Rigidbody2D:
   m_Simulated: 0
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 1
+  m_Mass: 50
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 1
@@ -309,7 +309,7 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!114 &7431479398770960806
+--- !u!114 &3278666019257068106
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -318,12 +318,24 @@ MonoBehaviour:
   m_GameObject: {fileID: 6569747233947127726}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe2f17a434b0dd24f89d919a01df96a6, type: 3}
+  m_Script: {fileID: 11500000, guid: 05972689a9b5be848a1ccf9116c03324, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   blockHP: 3
-  spriteRenderer: {fileID: 0}
-  Textures: []
+  spriteRenderer:
+  - {fileID: 3148044688949425586}
+  - {fileID: 3463405389715251742}
+  - {fileID: 5187061260869657396}
+  Textures:
+  - {fileID: 1770814518, guid: e8b22161862bc9e45bf63be4d7fe15d1, type: 3}
+  - {fileID: -1073510800, guid: ba7cf4f7f3831ed488e33bd9321dae65, type: 3}
+  - {fileID: -1226598271, guid: e31599073755d6e47a4890935c59a56b, type: 3}
+  - {fileID: -1116518902, guid: e8b22161862bc9e45bf63be4d7fe15d1, type: 3}
+  - {fileID: 1343994773, guid: ba7cf4f7f3831ed488e33bd9321dae65, type: 3}
+  - {fileID: 1464328095, guid: e31599073755d6e47a4890935c59a56b, type: 3}
+  - {fileID: 1347350704, guid: e8b22161862bc9e45bf63be4d7fe15d1, type: 3}
+  - {fileID: -1078417347, guid: ba7cf4f7f3831ed488e33bd9321dae65, type: 3}
+  - {fileID: 822471242, guid: e31599073755d6e47a4890935c59a56b, type: 3}
 --- !u!1 &6601967183338890286
 GameObject:
   m_ObjectHideFlags: 0

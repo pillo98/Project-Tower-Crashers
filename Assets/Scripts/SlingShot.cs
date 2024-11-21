@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SearchService;
 
 public class SlingShot : MonoBehaviour
 {
@@ -12,7 +13,10 @@ public class SlingShot : MonoBehaviour
     public float forceFactor;
     bool HasShot;
 
-    public int Damage;
+    public int BuildDamage;
+
+    public int damage = 2;
+    public string TagName;
 
     [SerializeField]
     float Lifetime;
@@ -87,5 +91,14 @@ public class SlingShot : MonoBehaviour
         return new Vector2(endPos.x, endPos.y) + //X0
                 new Vector2(-forceAtProjectile.x * forceFactor, -forceAtProjectile.y * forceFactor) * elapsedTime + //ut
                 0.5f * Physics2D.gravity * elapsedTime * elapsedTime;
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.tag == TagName)
+        {
+            PlayerHealth playerHealth = collision.gameObject.GetComponent<PlayerHealth>();
+            playerHealth.TakeDamage(damage);
+        }
     }
 }
