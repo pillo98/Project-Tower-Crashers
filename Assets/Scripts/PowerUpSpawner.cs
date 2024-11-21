@@ -17,7 +17,7 @@ public class PowerUpSpawner : MonoBehaviour
 
     public void SpawnItem()
     {
-        GameObject PowerUp = PowerUps[Random.Range(0, PowerUps.Count)];
+        GameObject PowerUp = PowerUps[Random.Range(0, PowerUps.Count-1)];
 
         float x = Random.Range(Point1.position.x, Point2.position.x);
         float y = Point1.position.y;
