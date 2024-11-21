@@ -41,3 +41,7 @@ MonoBehaviour:
     <ID>k__BackingField: 9
     <Size>k__BackingField: {x: 1, y: 2}
     <Prefab>k__BackingField: {fileID: 6569747233947127726, guid: 02d86cc3a7a585a49864104cff59637c, type: 3}
+  - <Name>k__BackingField: 1x2 Door (rotated)
+    <ID>k__BackingField: 10
+    <Size>k__BackingField: {x: 1, y: 2}
+    <Prefab>k__BackingField: {fileID: 6569747233947127726, guid: 02d86cc3a7a585a49864104cff59637c, type: 3}
