@@ -105,7 +105,7 @@ Transform:
   m_GameObject: {fileID: 1812286650088264712}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.23, y: -0.33, z: 0}
+  m_LocalPosition: {x: 0.15999997, y: -0.33, z: 0}
   m_LocalScale: {x: 1, y: 0.33, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -189,7 +189,7 @@ Transform:
   m_GameObject: {fileID: 3834909828501317784}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.23, y: 0, z: 0}
+  m_LocalPosition: {x: 0.16, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 0.33, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -322,7 +322,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   blockHP: 3
   spriteRenderer:
-  - {fileID: 0}
+  - {fileID: 3463405389715251742}
   - {fileID: 3463405389715251742}
   Textures:
   - {fileID: 1770814518, guid: e8b22161862bc9e45bf63be4d7fe15d1, type: 3}

@@ -43,6 +43,8 @@ public class RoundManager : MonoBehaviour
     [SerializeField]
     MovementController P1Movement;
     [SerializeField]
+    PowerUpSpawner p1PowerUpSpawner;
+    [SerializeField]
     PlayerController P1Player;
     [SerializeField]
     PlayerController P1jump;
@@ -52,6 +54,8 @@ public class RoundManager : MonoBehaviour
     [Header("Round P2Move")]
     [SerializeField]
     MovementController P2Movement;
+    [SerializeField]
+    PowerUpSpawner p2PowerUpSpawner;
     [SerializeField]
     PlayerController P2Player;
     [SerializeField]
@@ -113,6 +117,7 @@ public class RoundManager : MonoBehaviour
                 P1Movement.enabled = true;
                 P1Player.enabled = true;
                 P1jump.enabled = true;
+                p1PowerUpSpawner.SpawnItem();
                 break;
             case rounds.P2Move:
                 P1Movement.enabled = false;
@@ -122,6 +127,7 @@ public class RoundManager : MonoBehaviour
                 P2Player.enabled = true;
                 P2Pjump.enabled = true;
                 camBounds.TargetObject = CamPointP2M;
+                p2PowerUpSpawner.SpawnItem();
                 break;
             case rounds.P1Shoot:
                 Timer.enabled = false;
