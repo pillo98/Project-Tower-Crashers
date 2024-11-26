@@ -7,6 +7,8 @@ public class PlayerHealth : MonoBehaviour
 {
     public static event Action OnPlayerDamaged;
     public static event Action OnPlayerDeath;
+    [SerializeField]
+    public PowerUpManager powerUpManager;
 
     public float health, maxHealth;
 
