@@ -74,6 +74,7 @@ public class PlayerController : MonoBehaviour
 
         if (Input.GetButtonDown("Jump") && isGrounded)
         {
+            AudioManager.instance.Play("Jump");
             rb2d.velocity = new Vector2(rb2d.velocity.x, jumpPower);
         }
         // Set jump animation if the player is airborne
@@ -107,9 +108,14 @@ public class PlayerController : MonoBehaviour
 
         if (health <= 0)
         {
+            AudioManager.instance.Play("Death");
             health = 0;
             Debug.Log("You are DEAD!");
             OnPlayerDeath?.Invoke();
+        }
+        if (health > 0)
+        {
+            AudioManager.instance.Play("Damage");
         }
     }
     private void CheckGround()
