@@ -12,10 +12,10 @@ GameObject:
   - component: {fileID: 3783869021013375023}
   - component: {fileID: -7593353063125236575}
   - component: {fileID: 562098424954819946}
-  - component: {fileID: 2571475299689131749}
-  m_Layer: 0
-  m_Name: Bomb
-  m_TagString: Untagged
+  - component: {fileID: 7099030832196483761}
+  m_Layer: 11
+  m_Name: BombShootableP2
+  m_TagString: Projectile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -149,7 +149,7 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!114 &2571475299689131749
+--- !u!114 &7099030832196483761
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -158,7 +158,19 @@ MonoBehaviour:
   m_GameObject: {fileID: 5583589171328899092}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 45c674ba79c94ca49905f3d57b6f042e, type: 3}
+  m_Script: {fileID: 11500000, guid: aead3df65470e854fb69135c3a7c2d15, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  powerUpName: Bomb
+  fieldOfImpact: 3
+  force: 15
+  LayerToHit:
+    serializedVersion: 2
+    m_Bits: 256
+  initPos: {x: 0, y: 0, z: 0}
+  forceFactor: 10
+  BuildDamage: 1
+  damage: 2
+  TagName: P1
+  Lifetime: 5
+  trajectoryDot: {fileID: 1833503599805921465, guid: 08050cd2b98d60e4b9f032f93cb43fab, type: 3}
+  number: 15

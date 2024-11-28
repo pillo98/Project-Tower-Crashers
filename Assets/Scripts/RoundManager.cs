@@ -29,17 +29,30 @@ public class RoundManager : MonoBehaviour
     [SerializeField]
     GameObject timer;
 
+    [SerializeField]
+    GameObject P1WinScreen;
+    [SerializeField]
+    GameObject P2WinScreen;
+
     [Header("Round P1build")]
     [SerializeField]
     private List<GameObject> P1build = new();
     [SerializeField]
     private GameObject CamPointP1B;
+    [SerializeField]
+    PowerUpManager powerUpManagerP1;
+    [SerializeField]
+    private PlayerHealth P1HP;
 
     [Header("Round P2build")]
     [SerializeField]
     private List<GameObject> P2build = new();
     [SerializeField]
     private GameObject CamPointP2B;
+    [SerializeField]
+    PowerUpManager powerUpManagerP2;
+    [SerializeField]
+    private PlayerHealth P2HP;
 
     [Header("Round P1Move")]
     [SerializeField]
@@ -93,7 +106,7 @@ public class RoundManager : MonoBehaviour
             case rounds.P1Build:
                 foreach (GameObject s in P1build)
                 {
-                    s.active = true;
+                    s.SetActive(true);
                 }
                 camBounds.TargetObject = CamPointP1B;
                 break;
@@ -101,20 +114,22 @@ public class RoundManager : MonoBehaviour
             case rounds.P2Build:
                 foreach (GameObject s in P1build)
                 {
-                    s.active = false;
+                    s.SetActive(false);
                 }
                 camBounds.TargetObject = CamPointP2B;
                 foreach (GameObject s in P2build)
                 {
-                    s.active = true;
+                    s.SetActive(true);
                 }
                 break;
             case rounds.P1Move:
+                powerUpManagerP1.DisablePowerUps();
+                powerUpManagerP2.DisablePowerUps();
                 Timer.enabled = true;
-                timer.active = true;
+                timer.SetActive(true);
                 foreach (GameObject s in P2build)
                 {
-                    s.active = false;
+                    s.SetActive(false);
                 }
                 camBounds.TargetObject = CamPointP1M;
                 P1Movement.enabled = true;
@@ -134,7 +149,7 @@ public class RoundManager : MonoBehaviour
                 break;
             case rounds.P1Shoot:
                 Timer.enabled = false;
-                timer.active = true;
+                timer.SetActive(false);
                 P2Movement.enabled = false;
                 P2Player.enabled = false;
                 P2Pjump.enabled = false;
@@ -173,7 +188,7 @@ public class RoundManager : MonoBehaviour
                 ChangeRound();
             }
         }
-
+        CheckForWinner();
 
     }
 
@@ -188,5 +203,37 @@ public class RoundManager : MonoBehaviour
             MoveRoundTimer = MoveRoundInitialTime;
             ChangeRound();
         }
+    }
+    
+    void CheckForWinner()
+    {
+        if (P1HP.health <= 0)
+        {
+            P2WinScreen.SetActive(true);
+            CurrentRound = rounds.None;
+            Timer.enabled = false;
+            timer.SetActive(false);
+            P2Movement.enabled = false;
+            P2Player.enabled = false;
+            P2Pjump.enabled = false;
+            P1Movement.enabled = false;
+            P1jump.enabled = false;
+            P1Player.enabled = false;
+        }
+        if (P2HP.health <= 0)
+        {
+            P1WinScreen.SetActive(true);
+            CurrentRound = rounds.None;
+            Timer.enabled = false;
+            timer.SetActive(false);
+            P2Movement.enabled = false;
+            P2Player.enabled = false;
+            P2Pjump.enabled = false;
+            P1Movement.enabled = false;
+            P1jump.enabled = false;
+            P1Player.enabled = false;
+        }
+
+
     }
 }

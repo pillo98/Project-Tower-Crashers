@@ -4,13 +4,13 @@ using UnityEngine;
 
 public class BallSpawner : MonoBehaviour
 {
-    [SerializeField]
-    GameObject ball;
+    public GameObject ball;
     
     public GameObject CurrentBall;
 
     public void SpawnBall()
     {
-        CurrentBall = Instantiate(ball, transform);
+        CurrentBall = Instantiate(ball, transform
+            );
     }
 }

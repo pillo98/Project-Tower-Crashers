@@ -100,5 +100,17 @@ public class SlingShot : MonoBehaviour
             PlayerHealth playerHealth = collision.gameObject.GetComponent<PlayerHealth>();
             playerHealth.TakeDamage(damage);
         }
+        if (collision.gameObject.layer == 8)
+        {
+            if(collision.gameObject.GetComponent<Block>())
+            {
+                collision.gameObject.GetComponent<Block>().TakeDamage(BuildDamage);
+            }
+            if (collision.gameObject.GetComponent<BlockMultiSegment>())
+            {
+                collision.gameObject.GetComponent<BlockMultiSegment>().TakeDamage(BuildDamage);
+            }
+
+        }
     }
 }

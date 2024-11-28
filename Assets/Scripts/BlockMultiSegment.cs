@@ -13,16 +13,12 @@ public class BlockMultiSegment : MonoBehaviour
     [SerializeField]
     private List<Sprite> Textures;
 
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
-        SlingShot slingShot = collision.gameObject.GetComponent<SlingShot>();
 
-        if (collision.gameObject.tag == "Projectile")
-        {
-            blockHP -= slingShot.BuildDamage;
-            ChangeState(blockHP);
-        }
-    }
+    public void TakeDamage(int Amount)
+    {
+        blockHP -= Amount;
+        ChangeState(blockHP);
+    }                              
 
     private void Update()
     {

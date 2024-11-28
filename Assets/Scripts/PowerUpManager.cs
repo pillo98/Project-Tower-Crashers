@@ -17,12 +17,13 @@ public class PowerUpManager : MonoBehaviour
     public bool UpperBarrierEnabled = false;
     public bool LowerBarrierEnabled = false;
 
-    void Start()
-    {
-        PowerUpList.Add(UpperBarrierEnabled);
-        PowerUpList.Add(LowerBarrierEnabled);
-
-    }
+    [SerializeField]
+    private BallSpawner BallSpawner;
+    [SerializeField]
+    private GameObject Ball;
+    [Header("PowerUpPreFabs")]
+    [SerializeField]
+    private GameObject Bomb;
 
     private void Update()
     {
@@ -32,10 +33,9 @@ public class PowerUpManager : MonoBehaviour
 
     public void DisablePowerUps()
     {
-        for (int i = 0; i >= PowerUpList.Count; i++)
-        {
-            PowerUpList[i] = false;
-        }
+        UpperBarrierEnabled = false;
+        LowerBarrierEnabled = false;
+        BallSpawner.ball = Ball;
     }
 
     public void SetPowerUpOn(string powerUp)
@@ -47,6 +47,9 @@ public class PowerUpManager : MonoBehaviour
                 break;
             case "UpperBarrier":
                 UpperBarrierEnabled=true;
+                break;
+            case "Bomb":
+                BallSpawner.ball = Bomb;
                 break;
         }
     }
