@@ -90,6 +90,9 @@ public class RoundManager : MonoBehaviour
     [SerializeField]
     private GameObject CamPointP2S;
     [SerializeField]
+    Sound RoundChange;
+    [SerializeField]
+    AudioSource audioSource;
 
     private void Start()
     {
@@ -101,6 +104,7 @@ public class RoundManager : MonoBehaviour
     public void ChangeRound()
     {
         CurrentRound++;
+        audioSource.PlayOneShot(RoundChange.clip);
         switch (CurrentRound)
         {
             case rounds.P1Build:
