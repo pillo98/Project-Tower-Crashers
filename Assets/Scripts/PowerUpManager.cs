@@ -36,6 +36,7 @@ public class PowerUpManager : MonoBehaviour
         UpperBarrierEnabled = false;
         LowerBarrierEnabled = false;
         BallSpawner.ball = Ball;
+        gameObject.transform.localScale = new Vector3(1,1,1);
     }
 
     public void SetPowerUpOn(string powerUp)

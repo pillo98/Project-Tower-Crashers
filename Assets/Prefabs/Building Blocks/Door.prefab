@@ -211,7 +211,7 @@ GameObject:
   m_Component:
   - component: {fileID: 30503722074463185}
   - component: {fileID: 3588598496452362489}
-  - component: {fileID: 3278666019257068106}
+  - component: {fileID: 8959007173333276289}
   - component: {fileID: 1554534030751137543}
   m_Layer: 8
   m_Name: Door
@@ -263,7 +263,7 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!114 &3278666019257068106
+--- !u!114 &8959007173333276289
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -272,7 +272,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 6569747233947127726}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 05972689a9b5be848a1ccf9116c03324, type: 3}
+  m_Script: {fileID: 11500000, guid: 3b35b52c69aa7794d9793a51f9a964a6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   blockHP: 3

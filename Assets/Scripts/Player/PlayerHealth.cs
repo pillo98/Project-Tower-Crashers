@@ -12,6 +12,11 @@ public class PlayerHealth : MonoBehaviour
 
     public float health, maxHealth;
 
+    [SerializeField]
+    AudioSource audioSource;
+    [SerializeField]
+    Sound damage, death;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -25,9 +30,14 @@ public class PlayerHealth : MonoBehaviour
 
         if (health <= 0)
         {
+            audioSource.PlayOneShot(death.clip);
             health = 0;
             Debug.Log("You are DEAD!");
             OnPlayerDeath?.Invoke();
+        }
+        else
+        {
+            audioSource.PlayOneShot(damage.clip);
         }
     }
 }

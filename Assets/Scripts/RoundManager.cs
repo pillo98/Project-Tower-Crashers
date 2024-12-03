@@ -133,16 +133,16 @@ public class RoundManager : MonoBehaviour
                 }
                 camBounds.TargetObject = CamPointP1M;
                 P1Movement.enabled = true;
-                P1Player.enabled = true;
+                P1Player.canMove = true;
                 P1jump.enabled = true;
                 p1PowerUpSpawner.SpawnItem();
                 break;
             case rounds.P2Move:
                 P1Movement.enabled = false;
                 P1jump.enabled = false;
-                P1Player.enabled = false;
+                P1Player.canMove = false;
                 P2Movement.enabled = true;
-                P2Player.enabled = true;
+                P2Player.canMove = true;
                 P2Pjump.enabled = true;
                 camBounds.TargetObject = CamPointP2M;
                 p2PowerUpSpawner.SpawnItem();
@@ -151,7 +151,7 @@ public class RoundManager : MonoBehaviour
                 Timer.enabled = false;
                 timer.SetActive(false);
                 P2Movement.enabled = false;
-                P2Player.enabled = false;
+                P2Player.canMove = false;
                 P2Pjump.enabled = false;
                 P1Shoot.SpawnBall();
                 camBounds.TargetObject = CamPointP1S;

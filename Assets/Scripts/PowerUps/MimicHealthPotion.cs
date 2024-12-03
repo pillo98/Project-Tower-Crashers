@@ -6,7 +6,10 @@ using UnityEngine;
 public class MimicHealthPotion : MonoBehaviour
 {
     public PlayerHealth playerHealth;
-
+    [SerializeField]
+    Sound pickup;
+    [SerializeField]
+    AudioSource audioSource;
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.CompareTag("Player"))
@@ -17,8 +20,8 @@ public class MimicHealthPotion : MonoBehaviour
 
     private void PickUp(Collider2D player)
     {
-        playerHealth.health -= 1;
-
+        playerHealth.health -= 2;
+        audioSource.PlayOneShot(pickup.clip);
         Destroy(gameObject);
     }
 }

@@ -7,6 +7,10 @@ public class HealthPotion : MonoBehaviour
     private Rigidbody2D rb2d;
     public PlayerHealth playerHealth;
     HealthHeartBar healthHeartBar;
+    [SerializeField]
+    Sound pickup;
+    [SerializeField]
+    AudioSource audioSource;
 
     private void Start()
     {
@@ -18,7 +22,7 @@ public class HealthPotion : MonoBehaviour
         if (collision.gameObject.CompareTag("Player")) 
         {
             playerHealth.health += 2f;
-            
+            audioSource.PlayOneShot(pickup.clip);
             Destroy(gameObject);
         }
     }

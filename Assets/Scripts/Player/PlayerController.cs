@@ -23,6 +23,17 @@ public class PlayerController : MonoBehaviour
 
     public float health, maxHealth;
     private bool facingRight = false;
+    public bool canMove = false;
+
+    [SerializeField]
+    private Sound Death;
+    [SerializeField]
+    private Sound Jump;
+    [SerializeField]
+    private Sound Damage;
+
+    [SerializeField]
+    private AudioSource audioSource;
 
     // Start is called before the first frame update
     void Start()
@@ -43,7 +54,7 @@ public class PlayerController : MonoBehaviour
     {
         Keyboard myKeyboard = Keyboard.current;
         valueX = 0;
-        if (myKeyboard != null)
+        if (myKeyboard != null && canMove)
         {
             if (myKeyboard.aKey.isPressed)
             {
@@ -72,9 +83,9 @@ public class PlayerController : MonoBehaviour
             }
         }
 
-        if (Input.GetButtonDown("Jump") && isGrounded)
+        if (Input.GetButtonDown("Jump") && isGrounded && canMove)
         {
-            AudioManager.instance.Play("Jump");
+            audioSource.PlayOneShot(Jump.clip);
             rb2d.velocity = new Vector2(rb2d.velocity.x, jumpPower);
         }
         // Set jump animation if the player is airborne
@@ -99,23 +110,6 @@ public class PlayerController : MonoBehaviour
         else
         {
             fallTrough = false;
-        }
-    }
-    public void TakeDamage(float amount)
-    {
-        health -= amount;
-        OnPlayerDamaged?.Invoke();
-
-        if (health <= 0)
-        {
-            AudioManager.instance.Play("Death");
-            health = 0;
-            Debug.Log("You are DEAD!");
-            OnPlayerDeath?.Invoke();
-        }
-        if (health > 0)
-        {
-            AudioManager.instance.Play("Damage");
         }
     }
     private void CheckGround()

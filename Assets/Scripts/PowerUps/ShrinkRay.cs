@@ -6,6 +6,10 @@ using UnityEngine;
 public class ShrinkRay : MonoBehaviour
 {
     public float multiplier = 1.4f;
+    [SerializeField]
+    Sound pickup;
+    [SerializeField]
+    AudioSource audioSource;
 
     private void OnTriggerEnter2D(Collider2D other)
     {
@@ -18,7 +22,7 @@ public class ShrinkRay : MonoBehaviour
     private void PickUp(Collider2D player)
     {
         player.transform.localScale /= multiplier;
-
+        audioSource.PlayOneShot(pickup.clip);
         Destroy(gameObject);
     }
 }
