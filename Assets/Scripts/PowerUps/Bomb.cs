@@ -54,7 +54,7 @@ public class Bomb : MonoBehaviour
                 Vector2 direction = obj.transform.position - transform.position;
 
                 obj.GetComponent<Rigidbody2D>().AddForce(direction * force);
-                if (obj.gameObject.tag == TagName)
+                if (obj.gameObject.tag == "P1"|| obj.gameObject.tag == "P2")
                 {
                     PlayerHealth playerHealth = obj.gameObject.GetComponent<PlayerHealth>();
                     playerHealth.TakeDamage(damage);

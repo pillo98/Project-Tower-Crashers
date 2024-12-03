@@ -19,11 +19,14 @@ public class HealthPotion : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.CompareTag("Player")) 
+        if (collision.gameObject.CompareTag("P1")|| collision.gameObject.CompareTag("P2")) 
         {
-            playerHealth.health += 2f;
-            audioSource.PlayOneShot(pickup.clip);
-            Destroy(gameObject);
+            if (playerHealth.health < playerHealth.maxHealth)
+            {
+                playerHealth.health += 2f;
+                audioSource.PlayOneShot(pickup.clip);
+                Destroy(gameObject);
+            }
         }
     }
 }

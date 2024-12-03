@@ -139,7 +139,7 @@ MonoBehaviour:
     clip: {fileID: 0}
     name: 
     volume: 0
-    pitch: 0
+    pitch: 0.1
     loop: 0
     source: {fileID: 0}
   audioSource: {fileID: -546543879598184327}

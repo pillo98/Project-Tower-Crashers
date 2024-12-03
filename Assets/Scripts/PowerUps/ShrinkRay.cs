@@ -13,7 +13,7 @@ public class ShrinkRay : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if (other.CompareTag("Player"))
+        if (other.gameObject.CompareTag("P1") || other.gameObject.CompareTag("P2"))
         {
             PickUp(other);
         }
