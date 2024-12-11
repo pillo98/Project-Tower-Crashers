@@ -20,7 +20,8 @@ public class MimicHealthPotion : MonoBehaviour
 
     private void PickUp(Collider2D player)
     {
-        playerHealth.health -= 2;
+        playerHealth = player.GetComponent<PlayerHealth>();
+        playerHealth.TakeDamage(2);
         audioSource.PlayOneShot(pickup.clip);
         Destroy(gameObject);
     }

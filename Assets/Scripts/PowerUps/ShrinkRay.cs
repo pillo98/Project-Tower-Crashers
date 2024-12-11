@@ -11,18 +11,18 @@ public class ShrinkRay : MonoBehaviour
     [SerializeField]
     AudioSource audioSource;
 
-    private void OnTriggerEnter2D(Collider2D other)
-    {
-        if (other.gameObject.CompareTag("P1") || other.gameObject.CompareTag("P2"))
-        {
-            PickUp(other);
-        }
-    }
-
     private void PickUp(Collider2D player)
     {
         player.transform.localScale /= multiplier;
         audioSource.PlayOneShot(pickup.clip);
         Destroy(gameObject);
+    }
+
+    private void OnCollisionEnter2D(Collision2D other)
+    {
+        if (other.gameObject.CompareTag("P1") || other.gameObject.CompareTag("P2"))
+        {
+            PickUp(other.collider);
+        }
     }
 }

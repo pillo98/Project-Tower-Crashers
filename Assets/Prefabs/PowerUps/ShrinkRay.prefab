@@ -102,10 +102,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   multiplier: 1.4
   pickup:
-    clip: {fileID: 0}
+    clip: {fileID: 8300000, guid: bc467d7185093d94789cd395e07dab65, type: 3}
     name: 
     volume: 0
-    pitch: 0
+    pitch: 0.1
     loop: 0
     source: {fileID: 0}
   audioSource: {fileID: -74658647788317957}

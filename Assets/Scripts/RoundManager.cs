@@ -183,6 +183,10 @@ public class RoundManager : MonoBehaviour
             {
                 ChangeRound();
             }
+            else if (P1Shoot.CurrentBall.GetComponent<SlingShot>().HasShot == true)
+            {
+                camBounds.TargetObject = P1Shoot.CurrentBall;
+            }
         }
         if (CurrentRound == rounds.P2Shoot)
         {
@@ -190,6 +194,10 @@ public class RoundManager : MonoBehaviour
             {
                 CurrentRound = rounds.P2Build;
                 ChangeRound();
+            }
+            else if (P2Shoot.CurrentBall.GetComponent<SlingShot>().HasShot == true)
+            {
+                camBounds.TargetObject = P2Shoot.CurrentBall;
             }
         }
         CheckForWinner();

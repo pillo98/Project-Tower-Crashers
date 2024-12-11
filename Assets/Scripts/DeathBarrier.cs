@@ -24,5 +24,11 @@ public class DeathBarrier : MonoBehaviour
             collision.transform.position = P2RespawnPoint.transform.position;
 
         }
+
+        else
+        {
+            Destroy(collision.gameObject);
+        }
+
     }
 }

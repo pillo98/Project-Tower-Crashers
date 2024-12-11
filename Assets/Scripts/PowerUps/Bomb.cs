@@ -18,7 +18,7 @@ public class Bomb : MonoBehaviour
     private Rigidbody2D rigidbody;
     private Vector3 forceAtProjectile;
     public float forceFactor;
-    bool HasShot;
+    public bool HasShot;
 
     public int BuildDamage;
 
@@ -68,6 +68,10 @@ public class Bomb : MonoBehaviour
                     if (obj.gameObject.GetComponent<BlockMultiSegment>())
                     {
                         obj.gameObject.GetComponent<BlockMultiSegment>().TakeDamage(BuildDamage);
+                    }
+                    if (obj.gameObject.GetComponent<BlockTwoSegment>())
+                    {
+                        obj.gameObject.GetComponent<BlockTwoSegment>().TakeDamage(BuildDamage);
                     }
 
                 }

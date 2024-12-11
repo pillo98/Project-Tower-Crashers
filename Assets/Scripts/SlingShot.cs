@@ -11,7 +11,7 @@ public class SlingShot : MonoBehaviour
     private Rigidbody2D rigidbody;
     private Vector3 forceAtProjectile;
     public float forceFactor;
-    bool HasShot;
+    public bool HasShot;
 
     public int BuildDamage;
 
@@ -110,7 +110,10 @@ public class SlingShot : MonoBehaviour
             {
                 collision.gameObject.GetComponent<BlockMultiSegment>().TakeDamage(BuildDamage);
             }
-
+            if (collision.gameObject.GetComponent<BlockTwoSegment>())
+            {
+                collision.gameObject.GetComponent<BlockTwoSegment>().TakeDamage(BuildDamage);
+            }
         }
     }
 }

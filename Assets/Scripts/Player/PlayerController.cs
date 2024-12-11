@@ -120,8 +120,13 @@ public class PlayerController : MonoBehaviour
     private void Flip()
     {
         facingRight = !facingRight;
-        Vector3 Scaler = transform.localScale;
-        Scaler.x *= -1;
-        transform.localScale = Scaler;
+        if (facingRight)
+        {
+            gameObject.GetComponent<SpriteRenderer>().flipX = true;
+        }
+        if (!facingRight)
+        {
+            gameObject.GetComponent<SpriteRenderer>().flipX = false;
+        }
     }
 }

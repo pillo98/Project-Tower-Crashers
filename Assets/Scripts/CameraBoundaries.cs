@@ -12,9 +12,12 @@ public class CameraBoundaries : MonoBehaviour
     private Transform target;
     public GameObject TargetObject;
     public GameObject initialMap;
+    [SerializeField]
+    public GameObject FallBackPoint;
 
     private void Update()
     {
+
         target = TargetObject.transform;
     }
 

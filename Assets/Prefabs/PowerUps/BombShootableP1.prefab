@@ -162,12 +162,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fieldOfImpact: 3
-  force: 15
+  force: 1500
   LayerToHit:
     serializedVersion: 2
     m_Bits: 256
   initPos: {x: 0, y: 0, z: 0}
   forceFactor: 10
+  HasShot: 0
   BuildDamage: 1
   damage: 2
   TagName: P2
