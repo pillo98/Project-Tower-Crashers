@@ -1274,7 +1274,7 @@ Animator:
   m_GameObject: {fileID: 235377285}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: b2b8b77cedaf7ea44b6b72d24a0f84ab, type: 2}
+  m_Controller: {fileID: 9100000, guid: 769099b085d87f54396e1144b8fbe780, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -8910,6 +8910,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 393207757526927592, guid: c9097e7145c2d9842af3606e92c84076, type: 3}
+      propertyPath: m_SortingOrder
+      value: -10
+      objectReference: {fileID: 0}
     - target: {fileID: 393368057545633744, guid: c9097e7145c2d9842af3606e92c84076, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.54
@@ -8917,6 +8921,14 @@ PrefabInstance:
     - target: {fileID: 393368057545633744, guid: c9097e7145c2d9842af3606e92c84076, type: 3}
       propertyPath: m_LocalPosition.y
       value: 1.04
+      objectReference: {fileID: 0}
+    - target: {fileID: 1681418712007564935, guid: c9097e7145c2d9842af3606e92c84076, type: 3}
+      propertyPath: m_SortingOrder
+      value: -10
+      objectReference: {fileID: 0}
+    - target: {fileID: 3814735990137016212, guid: c9097e7145c2d9842af3606e92c84076, type: 3}
+      propertyPath: m_SortingOrder
+      value: -10
       objectReference: {fileID: 0}
     - target: {fileID: 6268646637102896793, guid: c9097e7145c2d9842af3606e92c84076, type: 3}
       propertyPath: m_LocalPosition.x
@@ -8930,6 +8942,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Map
       objectReference: {fileID: 0}
+    - target: {fileID: 7711169773890107801, guid: c9097e7145c2d9842af3606e92c84076, type: 3}
+      propertyPath: m_SortingOrder
+      value: -100
+      objectReference: {fileID: 0}
     - target: {fileID: 7828194525832428515, guid: c9097e7145c2d9842af3606e92c84076, type: 3}
       propertyPath: m_Enabled
       value: 0
@@ -8942,7 +8958,8 @@ PrefabInstance:
       propertyPath: m_LocalPosition.y
       value: 5.4
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 1597264824019772342, guid: c9097e7145c2d9842af3606e92c84076, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:

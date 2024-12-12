@@ -337,15 +337,15 @@ MonoBehaviour:
   - {fileID: 4716782191590746425}
   - {fileID: 6330827914906699302}
   Textures:
-  - {fileID: 1770814518, guid: e8b22161862bc9e45bf63be4d7fe15d1, type: 3}
-  - {fileID: -1078417347, guid: ba7cf4f7f3831ed488e33bd9321dae65, type: 3}
-  - {fileID: 822471242, guid: e31599073755d6e47a4890935c59a56b, type: 3}
-  - {fileID: -1116518902, guid: e8b22161862bc9e45bf63be4d7fe15d1, type: 3}
-  - {fileID: 1343994773, guid: ba7cf4f7f3831ed488e33bd9321dae65, type: 3}
-  - {fileID: 1464328095, guid: e31599073755d6e47a4890935c59a56b, type: 3}
-  - {fileID: 1347350704, guid: e8b22161862bc9e45bf63be4d7fe15d1, type: 3}
-  - {fileID: -1073510800, guid: ba7cf4f7f3831ed488e33bd9321dae65, type: 3}
-  - {fileID: -1226598271, guid: e31599073755d6e47a4890935c59a56b, type: 3}
+  - {fileID: 21300000, guid: 35ce266dd5626d1458c06a0e9d8baf02, type: 3}
+  - {fileID: 21300000, guid: dd023901ef0147c4f8707ea548d279d7, type: 3}
+  - {fileID: 21300000, guid: f2f988afb1e5b3546ae87ad1546307ed, type: 3}
+  - {fileID: 21300000, guid: 35ce266dd5626d1458c06a0e9d8baf02, type: 3}
+  - {fileID: 21300000, guid: dd023901ef0147c4f8707ea548d279d7, type: 3}
+  - {fileID: 21300000, guid: f2f988afb1e5b3546ae87ad1546307ed, type: 3}
+  - {fileID: 21300000, guid: 35ce266dd5626d1458c06a0e9d8baf02, type: 3}
+  - {fileID: 21300000, guid: dd023901ef0147c4f8707ea548d279d7, type: 3}
+  - {fileID: 21300000, guid: f2f988afb1e5b3546ae87ad1546307ed, type: 3}
 --- !u!61 &6145156868886303426
 BoxCollider2D:
   m_ObjectHideFlags: 0

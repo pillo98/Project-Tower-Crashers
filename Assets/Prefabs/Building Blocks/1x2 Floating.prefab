@@ -408,12 +408,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   blockHP: 3
   spriteRenderer:
-  - {fileID: 3463405389715251742, guid: 02d86cc3a7a585a49864104cff59637c, type: 3}
-  - {fileID: 5187061260869657396, guid: 02d86cc3a7a585a49864104cff59637c, type: 3}
+  - {fileID: 223451843007164840}
+  - {fileID: 4716782191590746425}
   Textures:
-  - {fileID: 1180325287, guid: e8b22161862bc9e45bf63be4d7fe15d1, type: 3}
-  - {fileID: 2060495810, guid: f3d54ff34c3c14f4a9f5a76cbba0a888, type: 3}
-  - {fileID: 1468598029, guid: 787837d78cc03454e8889a48447af3ee, type: 3}
-  - {fileID: -391233270, guid: e8b22161862bc9e45bf63be4d7fe15d1, type: 3}
-  - {fileID: 1228068662, guid: f3d54ff34c3c14f4a9f5a76cbba0a888, type: 3}
-  - {fileID: 1940936543, guid: 787837d78cc03454e8889a48447af3ee, type: 3}
+  - {fileID: 21300000, guid: 35ce266dd5626d1458c06a0e9d8baf02, type: 3}
+  - {fileID: 21300000, guid: dd023901ef0147c4f8707ea548d279d7, type: 3}
+  - {fileID: 21300000, guid: f2f988afb1e5b3546ae87ad1546307ed, type: 3}
+  - {fileID: 21300000, guid: 35ce266dd5626d1458c06a0e9d8baf02, type: 3}
+  - {fileID: 21300000, guid: dd023901ef0147c4f8707ea548d279d7, type: 3}
+  - {fileID: 21300000, guid: f2f988afb1e5b3546ae87ad1546307ed, type: 3}

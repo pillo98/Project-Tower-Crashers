@@ -18,7 +18,7 @@ public class DeathBarrier : MonoBehaviour
 
         }
 
-        if (collision.CompareTag("P2"))
+        else if (collision.CompareTag("P2"))
         {
             collision.GetComponent<PlayerHealth>().TakeDamage(4);
             collision.transform.position = P2RespawnPoint.transform.position;
