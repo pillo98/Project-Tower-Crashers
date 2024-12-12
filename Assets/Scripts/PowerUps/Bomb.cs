@@ -20,6 +20,9 @@ public class Bomb : MonoBehaviour
     public float forceFactor;
     public bool HasShot;
 
+    [SerializeField]
+    GameObject explosionPrefab;
+
     public int BuildDamage;
 
     public int damage = 2;
@@ -33,10 +36,15 @@ public class Bomb : MonoBehaviour
     private GameObject[] trajectoryDots;
     public int number;
 
+    public Collider2D[] objects;
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.layer != 9)
+        if (collision.gameObject.tag != TagName && collision.gameObject.layer == 9)
+        {
+        
+        }
+        else
         {
             explode();
         }
@@ -45,21 +53,23 @@ public class Bomb : MonoBehaviour
 
     private void explode()
     {
-        Collider2D[] objects = Physics2D.OverlapCircleAll(transform.position, fieldOfImpact, LayerToHit);
+        objects = Physics2D.OverlapCircleAll(transform.position, fieldOfImpact, LayerToHit);
 
         foreach (Collider2D obj in objects) 
         {
             if (obj.GetComponent<Rigidbody2D>())
             {
                 Vector2 direction = obj.transform.position - transform.position;
-
-                obj.GetComponent<Rigidbody2D>().AddForce(direction * force);
-                if (obj.gameObject.tag == "P1"|| obj.gameObject.tag == "P2")
+                if (obj.gameObject.layer == 8)
+                 obj.GetComponent<Rigidbody2D>().AddForce(direction * force);
+                if (obj.gameObject.layer == 9 && obj.gameObject.tag == TagName )
                 {
+                    Debug.Log("player hit");
                     PlayerHealth playerHealth = obj.gameObject.GetComponent<PlayerHealth>();
                     playerHealth.TakeDamage(damage);
+                    
                 }
-                if (obj.gameObject.layer == 8)
+                if (obj.gameObject.layer == 8 && obj.gameObject.tag == TagName)
                 {
                     if (obj.gameObject.GetComponent<Block>())
                     {
@@ -79,6 +89,8 @@ public class Bomb : MonoBehaviour
 
             }
         }
+
+        Instantiate(explosionPrefab, transform.position, transform.rotation);
         Destroy(gameObject);
     }
 

@@ -16,6 +16,7 @@ public class RoundManager : MonoBehaviour
         ,P2Shoot
     }
 
+
     public rounds CurrentRound;
 
     float MoveRoundTimer;
@@ -23,6 +24,7 @@ public class RoundManager : MonoBehaviour
     int MoveRoundTimeSec;
 
     public CameraBoundaries camBounds;
+    public GameObject FallBackCamPoint;
 
     [SerializeField]
     TMP_Text Timer;
@@ -135,7 +137,6 @@ public class RoundManager : MonoBehaviour
                 {
                     s.SetActive(false);
                 }
-                camBounds.TargetObject = CamPointP1M;
                 P1Movement.enabled = true;
                 P1Player.canMove = true;
                 P1jump.enabled = true;
@@ -148,17 +149,16 @@ public class RoundManager : MonoBehaviour
                 P2Movement.enabled = true;
                 P2Player.canMove = true;
                 P2Pjump.enabled = true;
-                camBounds.TargetObject = CamPointP2M;
                 p2PowerUpSpawner.SpawnItem();
                 break;
             case rounds.P1Shoot:
+                camBounds.TargetObject = CamPointP1S;
                 Timer.enabled = false;
                 timer.SetActive(false);
                 P2Movement.enabled = false;
                 P2Player.canMove = false;
                 P2Pjump.enabled = false;
                 P1Shoot.SpawnBall();
-                camBounds.TargetObject = CamPointP1S;
                 break;
             case rounds.P2Shoot:
                 P2Shoot.SpawnBall();
@@ -169,12 +169,18 @@ public class RoundManager : MonoBehaviour
 
     private void Update()
     {
+        if (CurrentRound == rounds.None)
+        {
+            camBounds.TargetObject = FallBackCamPoint;
+        }
         if (CurrentRound == rounds.P1Move)
         {
+            camBounds.TargetObject = CamPointP1M;
             TimerStart();
         }
         if (CurrentRound == rounds.P2Move)
         {
+            camBounds.TargetObject = CamPointP2M;
             TimerStart();
         }
         if (CurrentRound == rounds.P1Shoot)
@@ -183,6 +189,30 @@ public class RoundManager : MonoBehaviour
             {
                 ChangeRound();
             }
+
+            if (P1Shoot.CurrentBall != null && P1Shoot.CurrentBall.GetComponent<SlingShot>())
+            {
+                if (P1Shoot.CurrentBall.GetComponent<SlingShot>().HasShot == true)
+                camBounds.TargetObject = P1Shoot.CurrentBall;
+                else
+                {
+                    camBounds.TargetObject = CamPointP1S;
+                }
+            }
+            else if (P1Shoot.CurrentBall != null && P1Shoot.CurrentBall.GetComponent<Bomb>())
+            {
+                if (P1Shoot.CurrentBall.GetComponent<Bomb>().HasShot == true)
+                    camBounds.TargetObject = P1Shoot.CurrentBall;
+                else
+                {
+                    camBounds.TargetObject = CamPointP1S;
+                }
+            }
+            else
+            {
+                camBounds.TargetObject = CamPointP1S;
+            }
+
         }
         if (CurrentRound == rounds.P2Shoot)
         {
@@ -190,6 +220,29 @@ public class RoundManager : MonoBehaviour
             {
                 CurrentRound = rounds.P2Build;
                 ChangeRound();
+            }
+
+            if (P2Shoot.CurrentBall != null && P2Shoot.CurrentBall.GetComponent<SlingShot>())
+            {
+                if (P2Shoot.CurrentBall.GetComponent<SlingShot>().HasShot == true)
+                    camBounds.TargetObject = P2Shoot.CurrentBall;
+                else
+                {
+                    camBounds.TargetObject = CamPointP2S;
+                }
+            }
+            else if (P2Shoot.CurrentBall != null && P2Shoot.CurrentBall.GetComponent<Bomb>())
+            {
+                if (P2Shoot.CurrentBall.GetComponent<Bomb>().HasShot == true)
+                    camBounds.TargetObject = P2Shoot.CurrentBall;
+                else
+                {
+                    camBounds.TargetObject = CamPointP2S;
+                }
+            }
+            else
+            {
+                camBounds.TargetObject = CamPointP2S;
             }
         }
         CheckForWinner();

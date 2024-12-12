@@ -11,14 +11,11 @@ public class ObjectPlacer : MonoBehaviour
 
     [SerializeField]
     PlacementSystem placementSystem;
-
-
-    [SerializeField]
-    int Objectlimit;
     public int PlaceObject(GameObject prefab, Vector3 position)
     {
         GameObject newObject = Instantiate(prefab);
         newObject.transform.position = position;
+        newObject.tag = this.gameObject.tag;
         placedGameObjects.Add(newObject);
         return placedGameObjects.Count - 1;
     }
@@ -30,15 +27,6 @@ public class ObjectPlacer : MonoBehaviour
             return;
         Destroy(placedGameObjects[gameObjectIndex]);
         placedGameObjects[gameObjectIndex] = null;
-    }
-
-    private void Update()
-    {
-        if (placedGameObjects.Count >= Objectlimit)
-        {
-            placementSystem.CanBuild = false;
-            placementSystem.StopPlacement();
-        }
     }
 
     public void AddPhysics()

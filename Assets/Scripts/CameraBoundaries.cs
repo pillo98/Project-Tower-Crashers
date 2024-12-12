@@ -42,7 +42,11 @@ public class CameraBoundaries : MonoBehaviour
 
     private void LateUpdate()
     {
-        transform.position = new Vector3(
-            Mathf.Clamp(target.position.x, tLX, bRX), Mathf.Clamp(target.position.y, bRY, tLY), transform.position.z);
+        if (target != null)
+        {
+            transform.position = new Vector3(
+                Mathf.Clamp(target.position.x, tLX, bRX), Mathf.Clamp(target.position.y, bRY, tLY), transform.position.z);
+        }
+
     }
 }

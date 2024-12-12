@@ -95,12 +95,12 @@ public class SlingShot : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.tag == TagName)
+        if (collision.gameObject.tag == TagName && collision.gameObject.layer != 8)
         {
             PlayerHealth playerHealth = collision.gameObject.GetComponent<PlayerHealth>();
             playerHealth.TakeDamage(damage);
         }
-        if (collision.gameObject.layer == 8)
+        if (collision.gameObject.layer == 8 && collision.gameObject.tag == TagName)
         {
             if(collision.gameObject.GetComponent<Block>())
             {

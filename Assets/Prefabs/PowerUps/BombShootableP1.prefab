@@ -162,16 +162,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fieldOfImpact: 3
-  force: 1500
+  force: 3000000
   LayerToHit:
     serializedVersion: 2
-    m_Bits: 256
+    m_Bits: 768
   initPos: {x: 0, y: 0, z: 0}
   forceFactor: 10
   HasShot: 0
+  explosionPrefab: {fileID: 2529197334705063999, guid: bc4bf526192771d439fcec172e76780e, type: 3}
   BuildDamage: 1
   damage: 2
   TagName: P2
   Lifetime: 5
   trajectoryDot: {fileID: 1833503599805921465, guid: 08050cd2b98d60e4b9f032f93cb43fab, type: 3}
   number: 15
+  objects: []

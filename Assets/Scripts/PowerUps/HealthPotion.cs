@@ -19,7 +19,7 @@ public class HealthPotion : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.CompareTag("P1")|| collision.gameObject.CompareTag("P2")) 
+        if (collision.gameObject.layer == 9) 
         {
             if (playerHealth.health < playerHealth.maxHealth)
             {

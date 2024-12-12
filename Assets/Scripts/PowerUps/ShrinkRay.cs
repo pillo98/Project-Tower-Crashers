@@ -20,7 +20,7 @@ public class ShrinkRay : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D other)
     {
-        if (other.gameObject.CompareTag("P1") || other.gameObject.CompareTag("P2"))
+        if (other.gameObject.layer == 9)
         {
             PickUp(other.collider);
         }
