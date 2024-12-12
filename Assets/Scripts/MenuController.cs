@@ -12,7 +12,6 @@ public class MainMenu : MonoBehaviour
     public string Kontrollit;
     public void NewGame()
     {
-        AudioManager.instance.Play("Start_Button");
 
         // Aloitetaan uusi peli
         SceneManager.LoadScene(Game);

@@ -138,7 +138,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerHealth: {fileID: 0}
   pickup:
-    clip: {fileID: 0}
+    clip: {fileID: 8300000, guid: 33481fea0d89c1c43a31cb66c6ea5ccb, type: 3}
     name: 
     volume: 0
     pitch: 0.1

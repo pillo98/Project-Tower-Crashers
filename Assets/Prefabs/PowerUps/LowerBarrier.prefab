@@ -102,10 +102,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   powerUpName: LowerBarrier
   PickUp:
-    clip: {fileID: 0}
+    clip: {fileID: 8300000, guid: 2aa7fde9634b5254786f44c8cdc82d73, type: 3}
     name: 
     volume: 0
-    pitch: 0
+    pitch: 0.1
     loop: 0
     source: {fileID: 0}
   audioSource: {fileID: 5736396666226663346}

@@ -164,10 +164,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   powerUpName: Bomb
   PickUp:
-    clip: {fileID: 0}
+    clip: {fileID: 8300000, guid: fd126969715232345adb0c06cbf96c93, type: 3}
     name: 
     volume: 0
-    pitch: 0
+    pitch: 0.1
     loop: 0
     source: {fileID: 0}
   audioSource: {fileID: 2152252969414882606}
