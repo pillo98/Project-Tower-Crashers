@@ -21,12 +21,17 @@ public class HealthPotion : MonoBehaviour
     {
         if (collision.gameObject.layer == 9) 
         {
-            if (playerHealth.health < playerHealth.maxHealth)
+            if (collision.gameObject.GetComponent<PlayerHealth>())
             {
-                playerHealth.health += 2f;
-                audioSource.PlayOneShot(pickup.clip);
-                Destroy(gameObject);
+                PlayerHealth playerHealth = collision.gameObject.GetComponent<PlayerHealth>();
+                if (playerHealth.health < playerHealth.maxHealth)
+                {
+                    playerHealth.TakeDamage(-2);
+                    audioSource.PlayOneShot(pickup.clip);
+                    Destroy(gameObject);
+                }
             }
+
         }
     }
 }

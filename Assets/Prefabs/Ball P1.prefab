@@ -101,10 +101,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   initPos: {x: 0, y: 0, z: 0}
   forceFactor: 10
+  HasShot: 0
   BuildDamage: 1
   damage: 2
   TagName: P2
-  Lifetime: 5
+  Lifetime: 10
   trajectoryDot: {fileID: 1833503599805921465, guid: 08050cd2b98d60e4b9f032f93cb43fab, type: 3}
   number: 15
 --- !u!58 &8611511082390453654

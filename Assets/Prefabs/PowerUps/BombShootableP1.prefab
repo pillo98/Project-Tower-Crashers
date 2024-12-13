@@ -173,7 +173,7 @@ MonoBehaviour:
   BuildDamage: 1
   damage: 2
   TagName: P2
-  Lifetime: 5
+  Lifetime: 10
   trajectoryDot: {fileID: 1833503599805921465, guid: 08050cd2b98d60e4b9f032f93cb43fab, type: 3}
   number: 15
   objects: []
