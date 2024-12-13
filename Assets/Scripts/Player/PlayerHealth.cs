@@ -23,6 +23,12 @@ public class PlayerHealth : MonoBehaviour
         health = maxHealth;
     }
 
+    public void OnSceneUnloaded()
+    {
+        OnPlayerDamaged = null;
+        OnPlayerDeath = null;
+    }
+
     public void TakeDamage(float amount)
     {
         health -= amount;

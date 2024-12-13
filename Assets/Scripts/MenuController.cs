@@ -14,7 +14,7 @@ public class MainMenu : MonoBehaviour
     {
 
         // Aloitetaan uusi peli
-        SceneManager.LoadScene(Game);
+        SceneManager.LoadScene(Game, LoadSceneMode.Single);
     }
 
     public void Creditit()

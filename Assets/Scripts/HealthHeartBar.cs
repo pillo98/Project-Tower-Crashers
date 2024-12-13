@@ -16,9 +16,9 @@ public class HealthHeartBar : MonoBehaviour
 
     private void OnDisable()
     {
-        PlayerHealth.OnPlayerDamaged += DrawHearts;
+        PlayerHealth.OnPlayerDamaged -= DrawHearts;
     }
-
+    
     private void Start()
     {
         DrawHearts();
@@ -55,7 +55,8 @@ public class HealthHeartBar : MonoBehaviour
     {
         foreach (Transform t in transform)
         {
-            Destroy(t.gameObject);
+            if (t != null)
+                Destroy(t.gameObject);
         }
         hearts = new List<HealthHeart>();
     }

@@ -11,19 +11,23 @@ public class DeathBarrier : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.CompareTag("P1"))
+        if(collision.GetComponent<PlayerHealth>())
         {
-            collision.GetComponent<PlayerHealth>().TakeDamage(4);
-            collision.transform.position = P1RespawnPoint.transform.position;
+            if (collision.CompareTag("P1"))
+            {
+                collision.GetComponent<PlayerHealth>().TakeDamage(4);
+                collision.transform.position = P1RespawnPoint.transform.position;
 
+            }
+
+            else if (collision.CompareTag("P2"))
+            {
+                collision.GetComponent<PlayerHealth>().TakeDamage(4);
+                collision.transform.position = P2RespawnPoint.transform.position;
+
+            }
         }
 
-        else if (collision.CompareTag("P2"))
-        {
-            collision.GetComponent<PlayerHealth>().TakeDamage(4);
-            collision.transform.position = P2RespawnPoint.transform.position;
-
-        }
 
         else
         {
